@@ -158,7 +158,7 @@ let zeros_idx = [];
 let onPatterns = false;
 
 function preload() {
-  ft = loadFont('/fonts/SourceSansPro-ExtraLight.otf');
+  // ft = loadFont('/fonts/SourceSansPro-ExtraLight.otf');
   data = [];
 }
 
@@ -347,11 +347,11 @@ function draw() {
     style.isOver();
     stylen.display();
     stylen.isOver();
-    textFont(ft);
+    // textFont(ft);
     textAlign(LEFT);
     fill(0);
     noStroke();
-    textFont(ft);
+    // textFont(ft);
     textAlign(LEFT);
     textSize(height/50);
     text("gen: " + generation, width/35, height/20);
@@ -378,7 +378,7 @@ function draw() {
       // rect(width/95 + width/9 + width/150, height/70 + resolution * 7.7, w * 1.1, 14);
       fill(0);
       // text("rule: " + str, width/95 + width/9+width/120, height/70 + resolution * 9);
-      textFont(ft);
+      // textFont(ft);
       textAlign(LEFT);
       textSize(height/50);
       text("lr", lrs.rectX + width/200, lrs.rectY+height/40);
@@ -655,7 +655,7 @@ function mouseDragged() {
 }
 
 function mousePressed () {
-  if (!style.over) {
+  if (style && !style.over) {
     if (drawing || pause) {
       if (gameOfLifeOn) {
         grid[int(mouseX/resolution)][int(mouseY/resolution)] = 1;

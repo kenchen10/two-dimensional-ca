@@ -26,7 +26,7 @@ class Button {
     rect(this.x, this.y, this.w, this.h, 2);
     fill(0);
     textSize(height/50)
-    textFont(ft);
+    // textFont(ft);
     textAlign(CENTER);
     text(this.t, this.x, this.y + this.h/1.5, this.w);
   }
